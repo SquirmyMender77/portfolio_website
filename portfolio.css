@@ -1,40 +1,21 @@
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
 }
 
 @keyframes rainbow{
-  0% {
-    color: rgb(232, 0, 13);
-  }
-  14% {
-    color: rgb(255, 140, 0);
-  }
-  28% {
-    color: rgb(255, 255, 0);
-  }
-  42% {
-    color: rgb(0, 128, 0);
-  }
-  57% {
-    color: rgb(0, 0, 255);
-  }
-  71% {
-    color: rgb(75, 0, 130);
-  }
-  85% {
-    color: rgb(238, 130, 238);
-  }
+  0% {color: rgb(232, 0, 13);}
+  14% {color: rgb(255, 140, 0);}
+  28% {color: rgb(255, 255, 0);}
+  42% {color: rgb(0, 128, 0);}
+  57% {color: rgb(0, 0, 255);}
+  71% {color: rgb(75, 0, 130);}
+  85% {color: rgb(238, 130, 238);}
+  100% {color: rgb(232, 0, 13);}
 }
 
 
-h1 {
-  color: rgb(15, 32, 64);
-}
+h1 {color: rgb(15, 32, 64);}
 
 h2 {
   color: rgb(15, 32, 64);
@@ -167,13 +148,9 @@ body {
   overflow: hidden;
 }
 
-.gallery-left {
-  left: 24px;
-}
+.gallery-left {left: 24px;}
 
-.gallery-right {
-  right: 24px;
-}
+.gallery-right {right: 24px;}
 
 .gallery img {
   width: 180px;
@@ -208,72 +185,53 @@ body {
   margin-bottom: 5px;
 }
 
-.name-header {
-  position: relative;
-}
+.name-header {position: relative;}
 
 @media (max-width: 1900px) {
-  .gallery {
-    display: none;
-  }
-}
+  .gallery {display: none;}}
 
 @media (hover:hover){
-  .jayhawk:hover {
-    animation: spin 1.5s linear infinite;
-  }
+  .jayhawk:hover {animation: spin 1.5s linear infinite;}
 
-  .self-portrait-container:hover .self-portrait {
-    transform: scale(0);
-  }
+  .self-portrait-container:hover .self-portrait {transform: scale(0);}
 
-  .topnav-link:hover {
-    text-decoration: underline;
-  }
+  .topnav-link:hover {text-decoration: underline;}
 
-  .bottom-nav-link:hover {
-    text-decoration: underline;
-  }
+  .bottom-nav-link:hover {text-decoration: underline;}
 
-  .link:hover {
-    text-decoration: underline;
-  }
+  .link:hover {text-decoration: underline;}
 
   .card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  }
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);}
+
+   @media(pointer:fine){
+    .mobile-link{display: none;}
+
+    .mobile-number{display: inline;}  }
 
 }
 
 @media (hover:none){
-  .topnav-link:active {
-    text-decoration: underline;
-  }
+  .topnav-link:active {text-decoration: underline;}
 
-  .bottom-nav-link:active {
-    text-decoration: underline;
-  }
+  .bottom-nav-link:active {text-decoration: underline;}
 
-  .link:active {
-    text-decoration: underline;
-  }
+  .link:active {text-decoration: underline;}
 
-  .self-portrait-container:active .self-portrait {
-    transform: scale(0);
-  }
+  .self-portrait-container:active .self-portrait {transform: scale(0);}
 
-  .jayhawk:active {
-    animation: spin 1.5s linear infinite;
-  }
+  .jayhawk:active {animation: spin 1.5s linear infinite;}
 
   .card:active {
     transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  }
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);  }
 
+  @media(pointer:coarse){
+    .mobile-link{display: inline;}
+
+    .mobile-number{display: none;}  }  
 }
 
-.skill.wave-on {
-  animation: rainbow 1s linear 1;
-}
+.skill.wave-on {animation: rainbow 1s linear 1;}  
+  
