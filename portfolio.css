@@ -1,0 +1,279 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rainbow{
+  0% {
+    color: rgb(232, 0, 13);
+  }
+  14% {
+    color: rgb(255, 140, 0);
+  }
+  28% {
+    color: rgb(255, 255, 0);
+  }
+  42% {
+    color: rgb(0, 128, 0);
+  }
+  57% {
+    color: rgb(0, 0, 255);
+  }
+  71% {
+    color: rgb(75, 0, 130);
+  }
+  85% {
+    color: rgb(238, 130, 238);
+  }
+}
+
+
+h1 {
+  color: rgb(15, 32, 64);
+}
+
+h2 {
+  color: rgb(15, 32, 64);
+  border-bottom: 4px solid rgb(232, 0, 13);
+}
+
+h3 {
+  color: rgb(15, 32, 64);
+  text-align: center;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.card {
+  background: rgb(244, 244, 244);
+  border: 2px solid rgb(232, 0, 13);
+  padding: 20px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.skill {
+  display: inline-block;
+  background: rgb(15, 32, 64);
+  color: rgb(255, 255, 255);
+  padding: 6px 14px;
+  margin: 0 8px 8px 0;
+  border-radius: 999px;
+  font-weight: bold;
+  transition: color .4s ease;
+}
+
+.main {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.hero {
+  background: rgb(15, 32, 64);
+  border-top: 6px solid rgb(232, 0, 13);
+  padding: 64px 24px;
+}
+
+.hero h1 {
+  color: rgb(255, 255, 255);
+  font-size: 48px;
+  margin: 0 0 12px;
+}
+
+.hero p {
+  color: rgb(192, 200, 216);
+  margin: 4px 0;
+}
+
+.bottom {
+  background: rgb(15, 32, 64);
+  border-bottom: 6px solid rgb(232, 0, 13);
+  padding: 64px 24px;
+}
+
+.bottom p {
+  color: rgb(255, 255, 255);
+  margin: 4px 0;
+}
+
+.topnav {
+  position: sticky;
+  top: 0;
+  background: rgb(15, 32, 64);
+  padding: 12px;
+  text-align: center;
+  z-index: 100;
+}
+
+.topnav a {
+  color: rgb(255, 255, 255);
+  margin: 0 2px;
+  text-decoration: none;
+}
+
+.bottom_nav {
+  bottom: 0;
+  background: rgb(15, 32, 64);
+  padding: 12px;
+  text-align: center;
+  z-index: 100;
+  font-size: medium;
+}
+
+.bottom_nav a {
+  color: rgb(255, 255, 255);
+  margin: 0 2px;
+  text-decoration: none;
+}
+
+.link {
+  font-size: 14px;
+  font-weight: normal;
+  color: rgb(15, 32, 64);
+  margin-left: 8px;
+  text-decoration: none;
+}
+
+.topnav-link {
+  font-size: 18px;
+  font-weight: normal;
+  color: rgb(15, 32, 64);
+  margin-left: 8px;
+  text-decoration: none;
+}
+
+.bottom-nav-link {
+  font-weight: normal;
+  color: rgb(15, 32, 64);
+  margin-left: 8px;
+  text-decoration: none;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: fixed;
+  top: 420px;
+  overflow: hidden;
+}
+
+.gallery-left {
+  left: 24px;
+}
+
+.gallery-right {
+  right: 24px;
+}
+
+.gallery img {
+  width: 180px;
+  display: inline-block;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.self-portrait {
+  height: 250px;
+  width: 175px;
+  border-radius: 25%;
+  margin-left: 18%;
+  position: absolute;
+  right: 0;
+  top: -6%;
+  transition: transform 0.5s;
+}
+
+.self-portrait-container {
+  height: 250px;
+  width: 175px;
+  border-radius: 25%;
+  margin-left: 18%;
+  position: absolute;
+  right: 0;
+  top: -6%;
+}
+
+.jayhawk {
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+.name-header {
+  position: relative;
+}
+
+@media (max-width: 1900px) {
+  .gallery {
+    display: none;
+  }
+}
+
+@media (hover:hover){
+  .jayhawk:hover {
+    animation: spin 1.5s linear infinite;
+  }
+
+  .self-portrait-container:hover .self-portrait {
+    transform: scale(0);
+  }
+
+  .topnav-link:hover {
+    text-decoration: underline;
+  }
+
+  .bottom-nav-link:hover {
+    text-decoration: underline;
+  }
+
+  .link:hover {
+    text-decoration: underline;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+}
+
+@media (hover:none){
+  .topnav-link:active {
+    text-decoration: underline;
+  }
+
+  .bottom-nav-link:active {
+    text-decoration: underline;
+  }
+
+  .link:active {
+    text-decoration: underline;
+  }
+
+  .self-portrait-container:active .self-portrait {
+    transform: scale(0);
+  }
+
+  .jayhawk:active {
+    animation: spin 1.5s linear infinite;
+  }
+
+  .card:active {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+}
+
+.skill.wave-on {
+  animation: rainbow 1s linear 1;
+}

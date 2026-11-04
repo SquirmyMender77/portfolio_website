@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="portfolio.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preston Dahl - Engineering Portfolio</title>
+  </head>
+
+  <body id="top">
+    <div class="hero">
+      <h1 class="name-header">
+        Preston Dahl
+        <div class="self-portrait-container">
+          <img src="images/me.JPEG" alt="Preston Dahl" class="self-portrait" />
+        </div>
+      </h1>
+      <p>
+        Computer Engineering Student, Junior, Minor in Business — University of
+        Kansas | B.S. expected May 2028
+      </p>
+      <p>
+        Combining FPGA and embedded coursework with self-directed software and
+        homelab projects, plus hands-on PC and laptop hardware work. 
+      </p>
+      <p>  
+        Comfortable from gate-level logic and microcontroller firmware up through Dockerized
+        services and networked remote access.
+      </p>
+      <audio src="audio/music1.mp3" id="bg-music"></audio>
+        <button id="music-btn">Click for music if you want</button>
+
+    </div>
+
+    <nav class="topnav">
+      <a class="topnav-link" href="#skills">Skills</a>
+      <a class="topnav-link" href="#projects">Projects</a>
+      <a class="topnav-link" href="#contact">Contact</a>
+      <a class="topnav-link" href="#hardware">Hardware</a>
+    </nav>
+
+    <aside class="gallery gallery-left">
+      <img alt="blade laptop" src="images/blade_laptop.JPEG"/>
+      <img alt="main pc" src="images/main-pc.JPEG"/>
+      <img alt="TUF laptop" src="images/TUF_laptop.JPEG"/>
+      <img alt="pi server" src="images/pi_server.JPEG"/>
+    </aside>
+
+    <aside class="gallery gallery-right">
+      <img alt="old motherboard" src="images/old_motherboard.JPEG"/>
+      <img alt="shift register" src="images/shift-register.JPEG"/>
+      <img alt="old hard drive" src="images/HDD.JPEG"/>
+    </aside>
+
+    <div class="main">
+      <h2 class="education-heading">
+        Education
+        <img src="images/jayhawk.jpg" alt="jayhawk logo" class="jayhawk"/>
+      </h2>
+      <ul>
+        <li>
+          University of Kansas — B.S. Computer Engineering, expected May 2028.
+          Coursework: digital logic, circuits, discrete structures, programming
+          I & II, embedded systems.
+        </li>
+      </ul>
+
+      <h2 id="skills">Technical Skills</h2>
+      <div class="skills-container">
+        <span class="skill python_skill">Python</span>
+        <span class="skill C_skill">C/C++</span>
+        <span class="skill vhdl_skill">VHDL</span>
+        <span class="skill matlab_skill">MATLAB</span>
+        <span class="skill vivado_skill">Vivado</span>
+        <span class="skill platformio_skill">PlatformIO</span>
+        <span class="skill arduino_skill">Arduino (ATmega328P)</span>
+        <span class="skill docker_skill">Docker</span>
+        <span class="skill linux_skill">Linux</span>
+        <span class="skill tailscale_skill">Tailscale</span>
+        <span class="skill pspice_skill">Pspice</span>
+        <span class="skill bench_tools_skill">
+        Bench tools (oscilloscope, multimeter, function generator,
+        etc.)</span>
+      </div>
+      <h2 id="projects">Projects</h2>
+      <div class="card AI_assistant">
+        <h3>
+          Personal AI Assistant - Python, Gemini API -
+          <a class="link" href="https://github.com/SquirmyMender77/AI_assistant"
+            >View on Github</a
+          >
+        </h3>
+        <ul>
+          <li>
+            Built a command-line chat assistant in Python on the free Gemini API
+            tier, writing every line myself. Conversation memory as a
+            message-history list, resent each turn so the model recalls the
+            conversation; timestamps stripped before each API call.
+          </li>
+          <li>
+            History persisted to a timestamped JSON file after every turn, so a
+            crash or Ctrl+C loses nothing — persistence proven when the
+            assistant recalled my name and prior session after a restart.
+          </li>
+          <li>
+            Next step: multi-model routing with automatic fallback across
+            free-tier models.
+          </li>
+        </ul>
+      </div>
+      <div class="card EECS_388">
+        <h3>
+          EECS 388 - Embedded Systems (C/C++, ATmega328P, PlatformIO)
+          <a class="link" href="https://github.com/SquirmyMender77/EECS_388_LAB"
+            >View on Github</a
+          >
+        </h3>
+        <ul>
+          <li>
+            Wrote C/C++ firmware for the ATmega328P (Arduino Uno) in PlatformIO,
+            working from component datasheets and a shared GPIO library used
+            across the lab series.
+          </li>
+          <li>
+            Labs: timed LED blink patterns; UART echo to a serial terminal;
+            Benewake TFmini LiDAR distance sensing over serial; servo PWM
+            control (544–2400 µs pulses, 20 ms period, 0–180° sweep); BMP180
+            barometric sensing over I2C (address 0x77) with calibration math for
+            true temperature; and a dual-board UART link where one board sends
+            color characters and the second lights matching RGB LEDs.
+          </li>
+        </ul>
+      </div>
+      <div class="card EECS_140">
+        <h3>
+          EECS 140 — Digital Logic Design (VHDL, Vivado, FPGA) -
+          <a class="link" href="https://github.com/SquirmyMender77/EECS_140_LAB"
+            >View on Github</a
+          >
+        </h3>
+        <ul>
+          <li>
+            Designed combinational and sequential logic in VHDL and implemented
+            it in Vivado, with XDC pin constraints throughout.
+          </li>
+          <li>
+            Projects: two-input AND and multi-input XOR gates; a four-input
+            combinational function; a seven-segment decoder driving a four-digit
+            display (bitstream generated); a clocked 8-switch full-adder display
+            system; a four-function ALU (addition, AND, OR, XOR via 2-bit
+            select); a clock divider for time-multiplexed display logic; and a
+            clocked SR latch.
+          </li>
+        </ul>
+      </div>
+      <div class="card EECS_268">
+        <h3>
+          EECS 268 — Programming II (Python, data structures) -
+          <a class="link" href="https://github.com/SquirmyMender77/EECS_268_LAB"
+            >View on Github</a
+          >
+        </h3>
+
+        <h4>The Blob - recursive grid simulation</h4>
+        <ul>
+          <li>
+            A blob spreads orthogonally (up, right, down, left) across streets
+            and people, counts people consumed, and treats sewer tiles as
+            connected jumps — all sewers are pre-scanned, then each unvisited
+            sewer is visited in turn. Map files parsed for dimensions, start
+            position, and grid.
+          </li>
+          <li>
+            Also: a menu-driven board-game collection manager (TSV dataset;
+            sort, filter, edit, and compare ratings); linked stack, queue, and
+            list implementations built from scratch, applied to a CPU scheduling
+            simulation and a browser-history design; and recursion exercises.
+          </li>
+        </ul>
+      </div>
+      <div class="card EECS_168">
+        <h3>
+          EECS 168 - Programming 1 (Python) -
+          <a class="link" href="https://github.com/SquirmyMender77/EECS_168_LAB"
+            >View on Github</a
+          >
+        </h3>
+        <ul>
+          <li>
+            Nine Python labs from console I/O through object-oriented design: a
+            football point-spread calculator, a number-guessing game, pattern
+            printers, a planet mission log, a rook-placement board, a
+            digit-manipulation toolkit (palindrome, reverse, digit sum),
+            word-frequency analysis of the U.S. Constitution from a text file,
+            and a Circle class with a separate driver module.
+          </li>
+        </ul>
+      </div>
+      <div class="card EECS_210">
+        <h3>
+          EECS 210 — Discrete Structures (Python) -
+          <a class="link" href="https://github.com/SquirmyMender77/EECS_210_LAB"
+            >View on Github</a
+          >
+        </h3>
+        <ul>
+          <li>
+            Implemented discrete-math concepts in Python: bitstring AND/OR/XOR,
+            function/one-to-one/onto checking, matrix input and
+            standard-notation printing, binary modular exponentiation,
+            sorted-list merging, and next-largest digit arrangement.
+          </li>
+          <li>
+            Extended to validated square-matrix input, a Dijkstra-style
+            shortest-path implementation over an adjacency matrix, and a
+            stack-based prefix-to-postfix converter.
+          </li>
+        </ul>
+      </div>
+      <div class="card EECS_202">
+        <h3>
+          EECS 202 - Circuits 1 (MATLAB) -
+          <a class="link" href="https://github.com/SquirmyMender77/EECS_202_LAB"
+            >View on Github</a
+          >
+        </h3>
+        <ul>
+          <li>
+            MATLAB coursework (scripts only): matrix creation, indexing, and
+            transposition; matrix arithmetic; sine-wave generation and plotting
+            (30 kHz and 15 kHz); and a five-resistor network solved by nodal
+            analysis (conductance matrix, linsolve).
+          </li>
+        </ul>
+      </div>
+      <h2 id="hardware">Hardware and Homelab</h2>
+      <div class="card media_server">
+        <h3>Self-Hosted Media Server & Homelab (Docker, Linux, Networking)</h3>
+        <ul>
+          <li>
+            Jellyfin media server running in Docker on my main PC, with remote
+            access over Tailscale — set up to work around campus Wi-Fi client
+            isolation by adding the server manually by tailnet IP — plus HTTPS
+            funnel access for web UIs and storage spread across multiple drives,
+            with a 16 TB consolidation plan.
+          </li>
+          <li>
+            Day-to-day operation includes telling host-level faults (PC asleep)
+            apart from service-level faults when something goes down.
+          </li>
+        </ul>
+      </div>
+      <div class="card pc_builds">
+        <h3>Custom PC Building & Maintenance</h3>
+        <ul>
+          <li>
+            Build and maintain custom desktop PCs (Micro-ATX, heatsink-cooled
+            setups). My main PC — 32 GB DDR5, RTX 3070, storage across several
+            SSDs and HDDs — is assembled and upgraded by hand, including NVMe
+            and DDR4 installs and drive swaps.
+          </li>
+        </ul>
+      </div>
+      <div class="card laptop_repair">
+        <h3>Laptop Diagnostics & Repair (in progress)</h3>
+        <h4>ASUS TUF F17 (TUF706HM):</h4>
+        <ul>
+          <li>
+            Bought used and opened for inspection — repasted the CPU/GPU, found
+            a flat, healthy-looking battery with only cosmetic wear, and
+            diagnosed an empty Wi-Fi slot with loose antenna leads. Installed
+            spare NVMe SSD, DDR4 RAM, and Wifi Card. First attempt at power-on
+            led to discovery of a shorting Charger Connector; a new Connector is on its way.
+          </li>
+        </ul>
+        <h4>Razer Blade 15 (RZ09-03006):</h4>
+        <ul>
+          <li>
+            Diagnosed a corrupted BIOS from pre-POST symptoms — fans spin and
+            keyboard lights, but no display, and EC reset plus RAM reseating
+            ruled out simpler causes. Extracted and verified the official BIOS
+            image; used a CH341A Programmer Reflash Kit to connect to Winbond Flash Memory and reflash the BIOS.
+            The Claws that came with the Kit were too big and I wasn't able to make contact with the Winbond Chip. Pomona 5250 is now inbound and should do the trick.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <nav class="bottom_nav">
+        <p id="contact">
+          Email: Burnspreston03@gmail.com | Phone: (316) 494-0975 |
+          <a class="bottom-nav-link" href="https://github.com/SquirmyMender77"
+            >Github Account</a
+          >
+          | <a class="bottom-nav-link" href="#top">Top of Page</a>
+        </p>
+      </nav>
+    </div>
+    <script>
+      const music = document.getElementById('bg-music');
+      music.volume = 0.2;
+      const btn = document.getElementById('music-btn');
+      btn.addEventListener('click', () => {
+        if (music.paused) {
+          music.play();
+          btn.textContent = 'Pause music';
+        } else {
+          music.pause();
+          btn.textContent = 'Play music';
+        }
+      });
+
+      const tracks = [
+        'audio/music1.mp3',
+        'audio/music2.mp3',
+        'audio/music3.mp3',
+        'audio/music4.mp3'
+      ];
+      let currentTrack = 0;
+      music.addEventListener('ended', () => {
+        currentTrack = (currentTrack + 1) % tracks.length;
+        music.src = tracks[currentTrack];
+        music.play();
+      });
+
+      const chips = document.querySelectorAll('.skill');
+      const container = document.querySelector('.skills-container');
+      let wavePos = 0;
+      let waveTimer = null;
+      let hovering = false;
+
+      function advanceWave(){
+        if (wavePos < chips.length){
+          const chip = chips[wavePos];
+          chip.classList.remove('wave-on');
+          void chip.offsetWidth;
+          chip.classList.add('wave-on');
+          wavePos++;
+          waveTimer = setTimeout(advanceWave, 100);
+        } else if (hovering) {
+          wavePos = 0;
+          waveTimer = setTimeout(advanceWave, 100);
+        }
+      }
+
+      container.addEventListener('pointerenter', () => {
+        clearTimeout(waveTimer);
+        hovering = true;
+        wavePos = 0;
+        advanceWave();
+      });
+
+      container.addEventListener('pointerleave', () => {
+        hovering = false;
+      });
+
+
+    
+    </script>
+  </body>
+</html>
