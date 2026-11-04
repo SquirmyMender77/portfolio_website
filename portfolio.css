@@ -205,11 +205,6 @@ body {
     transform: translateY(-4px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);}
 
-   @media(pointer:fine){
-    .mobile-link{display: none;}
-
-    .mobile-number{display: inline;}  }
-
 }
 
 @media (hover:none){
@@ -226,11 +221,7 @@ body {
   .card:active {
     transform: translateY(-4px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);  }
-
-  @media(pointer:coarse){
-    .mobile-link{display: inline;}
-
-    .mobile-number{display: none;}  }  
+ 
 }
 
 .skill.wave-on {animation: rainbow 1s linear 1;}  
